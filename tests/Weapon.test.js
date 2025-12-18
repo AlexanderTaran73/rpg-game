@@ -114,7 +114,6 @@ describe('Weapon Class (default export)', () => {
     
     expect(weapon.getDamage()).toBe(1);
     
-    // Даже после "урона"
     weapon.takeDamage(1000);
     expect(weapon.getDamage()).toBe(1);
   });
@@ -178,7 +177,7 @@ describe('Specific Weapon Classes', () => {
     expect(longBow.name).toBe('Длинный лук');
     expect(longBow.attack).toBe(15);
     expect(longBow.range).toBe(4);
-    expect(longBow.durability).toBe(200); // Унаследовано от Bow
+    expect(longBow.durability).toBe(200);
   });
 
   test('Axe should extend Sword and override properties', () => {
@@ -189,7 +188,7 @@ describe('Specific Weapon Classes', () => {
     expect(axe.attack).toBe(27);
     expect(axe.durability).toBe(800);
     expect(axe.initDurability).toBe(800);
-    expect(axe.range).toBe(1); // Унаследовано от Sword
+    expect(axe.range).toBe(1);
   });
 
   test('StormStaff should extend Staff and override properties', () => {
@@ -199,7 +198,7 @@ describe('Specific Weapon Classes', () => {
     expect(stormStaff.name).toBe('Посох Бури');
     expect(stormStaff.attack).toBe(10);
     expect(stormStaff.range).toBe(3);
-    expect(stormStaff.durability).toBe(300); // Унаследовано от Staff
+    expect(stormStaff.durability).toBe(300);
   });
 });
 
